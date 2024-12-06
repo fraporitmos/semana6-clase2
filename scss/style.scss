@@ -1,0 +1,45 @@
+@use "variables";
+@use "mixins";
+@use "base";
+
+main {
+    max-width: variables.$maxWidth;
+    margin: 0 auto;
+    padding: variables.$paddingInner;
+
+    .intro {
+        text-align: center;
+        margin-bottom: variables.$paddingInner;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: variables.$paddingInner;
+
+        .service {
+            padding: variables.$paddingInner;
+            @include mixins.borderRounded(10px);
+        }
+    }
+
+    @media (max-width: 760px) {
+        .services {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .services {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .listNavigation {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }
+}

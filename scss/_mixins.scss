@@ -1,0 +1,6 @@
+@use 'variables';
+
+@mixin borderRounded($radius){
+    border-radius:  $radius;
+    border: 1px solid variables.$secondaryColor
+}

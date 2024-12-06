@@ -1,0 +1,48 @@
+@use "variables";
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: variables.$fontSize;
+    font-family: variables.$fontFamily;
+}
+
+a{
+    color: variables.$primaryColor;
+    text-decoration: none;
+    &:hover{
+        color: variables.$accentColor;
+    }
+    transition: 1s;
+    font-weight: bold;
+}
+
+header{
+    background-color: variables.$primaryColor;
+    padding: variables.$paddingInner;
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 2em;
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+footer{
+    background-color: variables.$primaryColor;
+    color: white;
+    text-align: center;
+    padding: variables.$paddingInner;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
